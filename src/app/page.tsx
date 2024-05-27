@@ -26,7 +26,8 @@ const Home: React.FC<HomeProps> = ({
               <div key={item.nomor}>
                 <CardUI
                   nomor={item.nomor}
-                  name={item.namaLatin}
+                  name={item.nama}
+                  latin={item.namaLatin}
                   tempatTurun={item.tempatTurun}
                   arti={item.arti}
                   ayat={item.jumlahAyat}

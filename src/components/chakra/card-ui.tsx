@@ -14,6 +14,7 @@ import Link from "next/link";
 interface CardProps {
   nomor: number;
   name: string;
+  latin: string;
   tempatTurun: string;
   arti: string;
   ayat: number;
@@ -22,6 +23,7 @@ interface CardProps {
 export default function CardUI({
   nomor,
   name,
+  latin,
   tempatTurun,
   arti,
   ayat,
@@ -40,7 +42,7 @@ export default function CardUI({
         justifyContent={"center"}
         _hover={{ bg: useColorModeValue("red.100", "gray.900") }}
       >
-        <Stack align={"center"} spacing={2}>
+        <Stack align={"center"} spacing={1}>
           <Stack direction={"row"} align={"center"} justify={"center"}>
             <Badge variant="solid" colorScheme="red">
               <Text letterSpacing={1} fontSize="9px">
@@ -54,9 +56,12 @@ export default function CardUI({
             </Badge>
           </Stack>
           <Heading fontSize={"2xl"} fontWeight={"bold"}>
-            {name}
+            {latin}
           </Heading>
-          <Text textAlign={"center"} fontSize={"sm"} letterSpacing={1}>
+          <Text textAlign={"center"} fontSize={"2xl"}>
+            {name}
+          </Text>
+          <Text mt={2} textAlign={"center"} fontSize={"md"} letterSpacing={1}>
             {arti}
           </Text>
         </Stack>
