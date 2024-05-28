@@ -53,17 +53,12 @@ export default function PageClient({
   };
 
   const colorHead = useColorModeValue("blue.600", "blue.100");
+  const bgColor = useColorModeValue("white", "blue.700");
 
   return (
     <main className="flex flex-col items-center justify-center">
       <Stack spacing="3">
-        <Card
-          bg={useColorModeValue("white", "blue.700")}
-          m={2}
-          maxW="4xl"
-          boxShadow={"lg"}
-          rounded={"xl"}
-        >
+        <Card bg={bgColor} m={2} maxW="4xl" boxShadow={"lg"} rounded={"xl"}>
           <CardBody>
             <Stack spacing="3">
               <HStack justify="space-between" alignItems={"center"} gap={4}>
