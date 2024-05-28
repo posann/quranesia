@@ -44,7 +44,7 @@ const Home: React.FC<HomeProps> = ({
             href={`/?page=${currentPage - 1}`}
             passHref
           >
-            <Button colorScheme="red" size={"xs"}>
+            <Button colorScheme="blue" size={"xs"}>
               Previous
             </Button>
           </Link>
@@ -55,7 +55,7 @@ const Home: React.FC<HomeProps> = ({
                 pageNumber === currentPage + 1) && (
                 <Link key={pageNumber} href={`/?page=${pageNumber}`} passHref>
                   <Button
-                    colorScheme="red"
+                    colorScheme="blue"
                     size={"xs"}
                     isActive={currentPage === pageNumber}
                   >
@@ -69,7 +69,7 @@ const Home: React.FC<HomeProps> = ({
             href={`/?page=${currentPage + 1}`}
             passHref
           >
-            <Button colorScheme="red" size={"xs"}>
+            <Button colorScheme="blue" size={"xs"}>
               Next
             </Button>
           </Link>

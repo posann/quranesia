@@ -22,9 +22,19 @@ export default function NavigationUI() {
       <Box px={{ base: 8, md: 48 }}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>
-            <Text className={rem.className} color={"red.500"} fontSize={"xl"}>
-              QURANESIA
-            </Text>
+            <Link
+              href="/"
+              textDecoration={"none"}
+              _hover={{ textDecoration: "none" }}
+            >
+              <Text
+                className={rem.className}
+                color={"blue.600"}
+                fontSize={"xl"}
+              >
+                QURANESIA
+              </Text>
+            </Link>
           </Box>
 
           <Flex alignItems={"center"}>

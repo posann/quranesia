@@ -74,3 +74,7 @@
     @apply flex min-h-[100svh] flex-col;
   }
 }
+
+.text-body {
+  @apply text-base tracking-wider leading-loose text-justify;
+}

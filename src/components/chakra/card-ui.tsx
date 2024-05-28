@@ -9,6 +9,7 @@ import {
   Stack,
   Badge,
 } from "@chakra-ui/react";
+import { Reem_Kufi } from "next/font/google";
 import Link from "next/link";
 
 interface CardProps {
@@ -19,6 +20,8 @@ interface CardProps {
   arti: string;
   ayat: number;
 }
+
+const noto = Reem_Kufi({ subsets: ["arabic"] });
 
 export default function CardUI({
   nomor,
@@ -40,16 +43,16 @@ export default function CardUI({
         zIndex={1}
         alignItems={"center"}
         justifyContent={"center"}
-        _hover={{ bg: useColorModeValue("red.100", "gray.900") }}
+        _hover={{ bg: useColorModeValue("blue.100", "gray.900") }}
       >
-        <Stack align={"center"} spacing={1}>
+        <Stack align={"center"} spacing={3}>
           <Stack direction={"row"} align={"center"} justify={"center"}>
-            <Badge variant="solid" colorScheme="red">
+            <Badge variant="outline" colorScheme="blue">
               <Text letterSpacing={1} fontSize="9px">
                 {ayat} Ayat
               </Text>
             </Badge>
-            <Badge variant="solid" colorScheme="orange">
+            <Badge variant="subtle" colorScheme="blue">
               <Text letterSpacing={1} fontSize="9px">
                 {tempatTurun}
               </Text>
@@ -58,10 +61,14 @@ export default function CardUI({
           <Heading fontSize={"2xl"} fontWeight={"bold"}>
             {latin}
           </Heading>
-          <Text textAlign={"center"} fontSize={"2xl"}>
+          <Text
+            className={noto.className}
+            textAlign={"center"}
+            fontSize={"2xl"}
+          >
             {name}
           </Text>
-          <Text mt={2} textAlign={"center"} fontSize={"md"} letterSpacing={1}>
+          <Text mt={2} textAlign={"center"} fontSize={"md"} letterSpacing={0.8}>
             {arti}
           </Text>
         </Stack>
