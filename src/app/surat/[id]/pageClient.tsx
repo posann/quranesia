@@ -30,6 +30,9 @@ export default function PageClient({
   const [currentStartIndex, setCurrentStartIndex] = useState(0);
   const ayatPerPage = 5;
 
+  const colorHead = useColorModeValue("blue.600", "blue.100");
+  const bgColor = useColorModeValue("white", "blue.700");
+
   if (!data) {
     return <Text>Loading...</Text>;
   }
@@ -51,9 +54,6 @@ export default function PageClient({
       setCurrentStartIndex(currentStartIndex - ayatPerPage);
     }
   };
-
-  const colorHead = useColorModeValue("blue.600", "blue.100");
-  const bgColor = useColorModeValue("white", "blue.700");
 
   return (
     <main className="flex flex-col items-center justify-center">
