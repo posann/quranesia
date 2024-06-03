@@ -38,7 +38,7 @@ const Home: React.FC<HomeProps> = ({
             <Text>No data available</Text>
           )}
         </SimpleGrid>
-        <HStack mt={8}>
+        <HStack my={8}>
           <Link
             hidden={currentPage === 1}
             href={`/?page=${currentPage - 1}`}
